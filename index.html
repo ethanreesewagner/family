@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h1>My Family Book</h1>
+            <img width="220" height="610" id="member" src="Will Wagner.png">
+            <script>
+               var members = ["Will Wagner","Lily Wagner","Ethan Wagner","Olga Wagner"]
+               var memNum = 0
+               function next(){
+                if(memNum > 3){
+                    memNum = 0
+                }
+                document.getElementById("member").src = members[memNum].concat(".png")
+                document.getElementById("membertext").innerHTML = members[memNum]
+                memNum++
+               } 
+            </script>
+            <br>
+            <h1 id="membertext">Will Wagner</h1>
+            <button onclick="next()"><h1>Next</h1></button>
+        </div>
+    </body>
+</html>
